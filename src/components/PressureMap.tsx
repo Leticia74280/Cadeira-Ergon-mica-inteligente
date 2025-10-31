@@ -13,14 +13,14 @@ interface PressureMapProps {
 
 export const PressureMap = ({ pressure, tiltAngle }: PressureMapProps) => {
   const getPressureColor = (value: number) => {
-    if (value < 30) return 'bg-success text-success-foreground';
-    if (value < 60) return 'bg-warning text-warning-foreground';
-    return 'bg-danger text-danger-foreground';
+    if (value < 40) return 'bg-danger text-danger-foreground';
+    if (value < 70) return 'bg-warning text-warning-foreground';
+    return 'bg-success text-success-foreground';
   };
 
   const getPressureStatus = (value: number) => {
-    if (value < 30) return 'Baixa';
-    if (value < 60) return 'Média';
+    if (value < 40) return 'Baixa';
+    if (value < 70) return 'Média';
     return 'Alta';
   };
 
